@@ -1,0 +1,32 @@
+/* Fix vendor prefix warnings */
+[type=search] {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    appearance: button;
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    appearance: button;
+}
+
+/* Fix line-clamp warning */
+[class*="line-clamp"] {
+    -webkit-line-clamp: var(--line-clamp, 1);
+    line-clamp: var(--line-clamp, 1);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Fix vertical-align warning */
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+}
